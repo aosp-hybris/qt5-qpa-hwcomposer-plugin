@@ -58,8 +58,11 @@ public:
     virtual float refreshRate();
 
 private:
+
+#ifdef HWC_DEVICE_API_VERSION_0_1
     hwc_composer_device_t *hwc_device;
     hwc_layer_list_t *hwc_layer_list;
+#endif
 };
 
 #endif /* HWCOMPOSER_BACKEND_V0_H */
